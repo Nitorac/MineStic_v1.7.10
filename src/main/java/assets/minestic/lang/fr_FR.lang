@@ -1,0 +1,47 @@
+item.RottenCuite.name=Chair Purifiee
+item.PlasticMediKit.name=Pack de survie en plastique
+
+item.PlasticCasque.name=Casque de plastique
+item.PlasticPlastron.name=Plastron de plastique
+item.PlasticPants.name=Pantalon de plastique
+item.PlasticBoots.name=Bottes de plastique
+item.PlasticIngot.name=Lingot de plastique
+item.PlasticDust.name=Poudre de plastique
+item.PlasticFlintAndSteel.name=Briquet en plastique
+item.PlasticCoal.name=Charbon de plastique
+item.RottenCakeItem.name=Gateau de chair purifie
+item.PlasticBucket.name=Seau de plastique
+item.PlasticSpeed.name=Boost du plastique
+
+tile.Plastic.name=Plastique
+tile.PlasticBlock.block.name=Block de plastique
+tile.PlasticBlock.chiseled.name=Block de plastique taille
+tile.PlasticBlock.hardened.name=Block de plastique cuit
+tile.PlasticChaud.name=Plastique brulant
+tile.PlasticChest.name=Coffre en plastique
+tile.PlasticFence.name=Barriere de plastique chaud
+tile.CompPlastic.name=Block de plastique compresse
+tile.plasticLight_off.name=Lampe en plastique
+tile.PlasticStone.name=Roche de plastique
+tile.PlasticDirt.name=Terre de plastique
+tile.PlasticGrass.name=Bloc d'herbe de plastique
+tile.PlasticMachine.name=Extracteur de plastique
+
+
+entity.PlasticCow.name=Vache en plastique
+entity.PlasticPig.name=Cochon en plastique
+
+itemGroup.PlasticTab=MineStic
+
+achievement.plasticmine=C'est l'heure du plastique!
+achievement.plasticmine.desc=Obtenir de la poudre de plastique, puis vous n'avez plus qu'a le faire cuire ...
+achievement.plasticsmelt=Fondre du plastique!
+achievement.plasticsmelt.desc=Obtenir un lingot de plastique, puis vous n'avez plus qu'a crafter quelques objets ...
+
+tile.MineSlab.gold.name=Dalle d'or
+tile.MineSlab.dirt.name=Dalle de terre
+tile.MineSlab.diamond.name=Dalle de diamant
+tile.MineSlab.staticgrass.name=Dalle d'herbe
+tile.MineSlab.plastic.name=Dalle de plastique
+tile.MineSlab.plasticchaud.name=Dalle de plastique chaud
+tile.PlasticCoalOre.name=Minerai de charbon de plastique

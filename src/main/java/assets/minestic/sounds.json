@@ -1,0 +1,53 @@
+
+{
+  "plasticcow.hurt": {
+    "category": "neutral",
+    "sounds": [
+      "plasticcow/hurt1",
+      "plasticcow/hurt2",
+      "plasticcow/hurt3"
+    ]
+  },
+  "plasticcow.say": {
+    "category": "neutral",
+    "sounds": [
+      "plasticcow/say1",
+      "plasticcow/say2",
+      "plasticcow/say3",
+	  "plasticcow/say4"
+    ]
+  },
+    "plasticcow.step": {
+    "category": "neutral",
+    "sounds": [
+      "plasticcow/step1",
+      "plasticcow/step2",
+      "plasticcow/step3",
+	  "plasticcow/step4"
+    ]
+  },
+      "plasticpig.say": {
+    "category": "neutral",
+    "sounds": [
+      "plasticpig/say1",
+      "plasticpig/say2",
+      "plasticpig/say3"
+    ]
+  },
+      "plasticpig.step": {
+    "category": "neutral",
+    "sounds": [
+      "plasticpig/step1",
+      "plasticpig/step2",
+      "plasticpig/step3",
+	  "plasticpig/step4",
+	  "plasticpig/step5"
+    ]
+  },
+      "plasticpig.death": {
+    "category": "neutral",
+    "sounds": [
+      "plasticpig/death"
+    ]
+  }
+}

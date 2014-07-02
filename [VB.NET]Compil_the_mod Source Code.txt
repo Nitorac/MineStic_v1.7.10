@@ -1,0 +1,84 @@
+Imports Shell32
+Imports System.IO
+
+'This program need the main window and a button
+'Ce programme nécessite une fenêtre principale et un bouton
+
+Public Class Form1
+    Dim OldFilePath As String
+    Dim FolderPath As String
+    Dim NewFilePath As String
+    Dim Path As String = Directory.GetCurrentDirectory()
+    Private Sub Form1_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
+        Dim FILE_NAME As String = Path + "\Compil.bat"
+        Dim aryText As String
+        aryText = "gradlew.bat build --info"
+        Dim objWriter As New System.IO.StreamWriter(FILE_NAME, True)
+        objWriter.WriteLine(aryText)
+        objWriter.Close()
+        MsgBox("Compil.bat créer !", MsgBoxStyle.Information)
+        If System.IO.Directory.Exists(Path + "\build\libs") Then System.IO.Directory.Delete(Path + "\build\libs", True)
+        System.IO.Directory.CreateDirectory(Path + "\build\libs")
+
+        Dim objProcess As System.Diagnostics.Process
+        objProcess = New System.Diagnostics.Process()
+        objProcess.StartInfo.FileName = Path + "\Compil.bat"
+        objProcess.StartInfo.WindowStyle = ProcessWindowStyle.Normal
+        objProcess.Start()
+        objProcess.WaitForExit()
+        objProcess.Close()
+
+        FolderPath = Path + "\build\libs\"
+        Dim d As DirectoryInfo = New DirectoryInfo(Path + "\build\libs\")
+        For Each File As FileInfo In d.GetFiles("*.jar")
+            OldFilePath = File.FullName
+        Next
+        IO.File.Move(OldFilePath, IO.Path.ChangeExtension(OldFilePath, ".zip"))
+        Dim ollolol As DirectoryInfo = New DirectoryInfo(Path + "\build\libs\")
+        For Each File As FileInfo In ollolol.GetFiles("*.zip")
+            OldFilePath = File.FullName
+        Next
+
+        Dim sc As New Shell32.Shell()
+        IO.Directory.CreateDirectory(FolderPath + "TEMP")
+        Dim output As Shell32.Folder = sc.NameSpace(FolderPath + "TEMP")
+        Dim input As Shell32.Folder = sc.NameSpace(OldFilePath)
+        output.CopyHere(input.Items, 4)
+
+        IO.Directory.CreateDirectory(FolderPath + "TEMP\assets")
+
+        My.Computer.FileSystem.CopyDirectory(Path + "\src\main\java\assets", FolderPath + "TEMP\assets", True)
+
+        System.IO.File.Delete(OldFilePath)
+
+        Dim startBuffer() As Byte = {80, 75, 5, 6, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0}
+        FileIO.FileSystem.WriteAllBytes(OldFilePath, startBuffer, False)
+        Dim sc1 As New Shell32.Shell()
+        Dim input1 As Shell32.Folder = sc.NameSpace(FolderPath + "TEMP")
+        Dim output1 As Shell32.Folder = sc.NameSpace(OldFilePath)
+        output1.CopyHere(input1.Items, 4)
+
+        Dim op As DirectoryInfo = New DirectoryInfo(Path + "\build\libs\")
+        For Each File As FileInfo In op.GetFiles("*.zip")
+            NewFilePath = File.FullName
+        Next
+        MsgBox("Rajout du dossier assets fini", MsgBoxStyle.Exclamation)
+        System.IO.File.Move(NewFilePath, IO.Path.ChangeExtension(NewFilePath, ".jar"))
+        Button1.PerformClick()
+    End Sub
+    Dim FinalFilePath As String
+    Dim FinalFileName As String
+    Private Sub Button1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button1.Click
+        System.IO.Directory.Delete(FolderPath + "TEMP", True)
+        Dim opi As DirectoryInfo = New DirectoryInfo(Path + "\build\libs\")
+        For Each File As FileInfo In opi.GetFiles("*.jar")
+            FinalFilePath = File.FullName
+            FinalFileName = File.Name
+        Next
+        If System.IO.File.Exists(Path + "\" + FinalFileName) Then System.IO.File.Delete(Path + "\" + FinalFileName)
+        System.IO.File.Copy(FinalFilePath, Path + "\" + FinalFileName)
+        System.IO.File.Delete(Path + "\Compil.bat")
+        MsgBox("Dossier TEMP supprime et nom du fichier : " + FinalFileName, MsgBoxStyle.Exclamation)
+        End
+    End Sub
+End Class

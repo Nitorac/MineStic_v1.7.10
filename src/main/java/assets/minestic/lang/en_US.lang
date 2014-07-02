@@ -1,0 +1,49 @@
+item.RottenCuite.name=Purified flesh
+item.PlasticMediKit.name=Plastic medikit
+
+item.PlasticCasque.name=Plastic Helmet
+item.PlasticPlastron.name=Plastic Chestplate
+item.PlasticPants.name=Plastic Leggins
+item.PlasticBoots.name=Plastic Boots
+item.PlasticIngot.name=Plastic Ingot
+item.PlasticDust.name=Plastic Dust
+item.PlasticFlintAndSteel.name=Plastic FlintAndSteel
+item.PlasticCoal.name=Plastic Coal
+item.RottenCakeItem.name=Purified flesh's Cake
+item.PlasticBucket.name=Plastic Bucket
+item.PlasticSpeed.name=Plastic Boost
+
+tile.Plastic.name=Plastic
+tile.PlasticBlock.block.name=Block of plastic
+tile.PlasticBlock.chiseled.name=Chiseled Plastic Bricks
+tile.PlasticBlock.hardened.name=Plastic Bricks
+tile.PlasticChaud.name=Scorching Plastic
+tile.PlasticChest.name=Plastic Chest
+tile.PlasticFence.name=Scorching Plastic Fence
+tile.CompPlastic.name=Block of compressed plastic
+tile.plasticLight_off.name=Plastic Lamp
+tile.PlasticStone.name=Plastic Stone
+tile.PlasticDirt.name=Plastic Dirt
+tile.PlasticGrass.name=Plastic Grass
+tile.PlasticMachine.name=Plastic Extractor
+
+
+entity.PlasticCow.name=Plastic Cow
+entity.PlasticPig.name=Plastic Pig
+
+itemGroup.PlasticTab=MineStic
+
+achievement.plasticmine=It's time for Plastic
+achievement.plasticmine.desc=Get the plastic dust, then you simply have to bake it...
+achievement.plasticsmelt=Smelt plastic !
+achievement.plasticsmelt.desc=Get a plastic ingot, then you just have to craft a few things ...
+achievement.plasticmedikit=Everything for health !
+achievement.plasticmedikit.desc=Craft a plastic medikit !
+
+tile.MineSlab.gold.name=Gold Slab
+tile.MineSlab.dirt.name=Dirt Slab
+tile.MineSlab.diamond.name=Diamond Slab
+tile.MineSlab.staticgrass.name=Grass Slab
+tile.MineSlab.plastic.name=Plastic Slab
+tile.MineSlab.plasticchaud.name=Scorching Plastic Slab
+tile.PlasticCoalOre.name=Plastic Coal Ore

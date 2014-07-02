@@ -1,0 +1,16 @@
+[
+{
+  "modid": "minestic",
+  "name": "\u00A73Mine Stic",
+  "description": "\u00A74Plastic mod for Minecraft !!!!!",
+  "version": "${version}",
+  "mcversion": "${mcversion}",
+  "url": "http://nitorac.url.ph/",
+  "updateUrl": "",
+  "authors": ["Nitorac"],
+  "credits": "\u00A73Created by Nitorac",
+  "logoFile": "plastic_logo.png",
+  "screenshots": [],
+  "dependencies": []
+}
+]
